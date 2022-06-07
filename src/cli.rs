@@ -26,6 +26,11 @@ pub enum SubCommand {
     Balance {
         /// Cluster.
         #[clap(short, long)]
+        #[clap(
+            possible_value("devnet"),
+            possible_value("testnet"),
+            possible_value("localnet")
+        )]
         #[clap(default_value = "devnet")]
         cluster: Cluster,
     },
@@ -33,7 +38,11 @@ pub enum SubCommand {
     Airdrop {
         /// Cluster to request from.
         #[clap(short, long)]
-        #[clap(possible_value("devnet"), possible_value("testnet"))]
+        #[clap(
+            possible_value("devnet"),
+            possible_value("testnet"),
+            possible_value("localnet")
+        )]
         #[clap(default_value = "devnet")]
         cluster: Cluster,
 
@@ -55,6 +64,11 @@ pub enum SubCommand {
     Transfer {
         /// Cluster to transfer tokens on.
         #[clap(short, long)]
+        #[clap(
+            possible_value("devnet"),
+            possible_value("testnet"),
+            possible_value("localnet")
+        )]
         #[clap(default_value = "devnet")]
         cluster: Cluster,
 
@@ -77,6 +91,11 @@ pub enum SubCommand {
     UploadProgramBuffer {
         /// Cluster to deploy to.
         #[clap(short, long)]
+        #[clap(
+            possible_value("devnet"),
+            possible_value("testnet"),
+            possible_value("localnet")
+        )]
         #[clap(default_value = "devnet")]
         cluster: Cluster,
 
@@ -96,6 +115,11 @@ pub enum SubCommand {
     Deploy {
         /// Cluster to deploy to.
         #[clap(short, long)]
+        #[clap(
+            possible_value("devnet"),
+            possible_value("testnet"),
+            possible_value("localnet")
+        )]
         #[clap(default_value = "devnet")]
         cluster: Cluster,
 
@@ -116,6 +140,11 @@ pub enum SubCommand {
     UpgradeLocal {
         /// Cluster to deploy to.
         #[clap(short, long)]
+        #[clap(
+            possible_value("devnet"),
+            possible_value("testnet"),
+            possible_value("localnet")
+        )]
         #[clap(default_value = "devnet")]
         cluster: Cluster,
 
